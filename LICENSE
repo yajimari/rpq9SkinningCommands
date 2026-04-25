@@ -1,0 +1,15 @@
+This repository contains files under multiple licenses.
+
+Unless otherwise stated, files in this repository are licensed under the MIT License.
+
+Files under `plug-ins/**` are not licensed under the MIT License.
+They are licensed under the separate custom license
+`LicenseRef-rpq9RestrictedBinary`.
+
+Full license texts are available in:
+
+- `LICENSES/MIT.txt`
+- `LICENSES/LicenseRef-rpq9RestrictedBinary.txt`
+
+The applicable license for each file is determined by the license notice for that file,
+any adjacent `.license` file, and `REUSE.toml`.
