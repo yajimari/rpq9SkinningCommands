@@ -4,6 +4,7 @@
 
 - [rpq9CopyBackVertexSkinWeights](#rpq9CopyBackVertexSkinWeights)
 - [rpq9CopyBackVertexDeformerWeights](#rpq9CopyBackVertexDeformerWeights)
+- [rpq9MirrorSkinWeights](#rpq9MirrorSkinWeights)
 
 ---
 
@@ -17,12 +18,12 @@ When selecting components, you can use either vertices or faces. Depending on th
 
 ### Flag
 
-| Long                    | Short  | Type | Description                      |
+| Long                    | Short  | Type     | Description                      |
 | ----------------------- | ------ | -------- | -------------------------------- |
 | `maxParam`              | `mp`   | `float`  | Maximum distance for back vertex search. The default value is std::numeric_limits<float>::max(). |
 | `threshold`             | `t`    | `float`  | Threshold used when findBackVertexMethod is set to raycast. The derault value is 0.001. |
 | `findBackVertexMethod`  | `fbvm` | `int`    | This flag controls how back vertices are obtained.: "score" or "rayCast". The default is default. |
-| `skinCluster`           | `sc`   | `string`  | Name of the skin cluster used for back vertex copying. By default, the last skin cluster is used. |
+| `skinCluster`           | `sc`   | `string` | Name of the skin cluster used for back vertex copying. By default, the last skin cluster is used. |
 
 ---
 <br>
@@ -37,9 +38,32 @@ When selecting components, you can use either vertices or faces. Depending on th
 
 ### Flag
 
-| Long                    | Short  | Type | Description                      |
+| Long                    | Short  | Type     | Description                      |
 | ----------------------- | ------ | -------- | -------------------------------- |
 | `maxParam`              | `mp`   | `float`  | Maximum distance for back vertex search. The default value is std::numeric_limits<float>::max(). |
 | `threshold`             | `t`    | `float`  | Threshold used when findBackVertexMethod is set to raycast. The derault value is 0.001. |
-| `findBackVertexMethod`  | `fbvm` | `int`    | This flag controls how back vertices are obtained.: "score" or "rayCast". The default is default. |
-| `deformer`              | `d`    | `string`  | Name of the deformer used for back vertex copying. |
+| `findBackVertexMethod`  | `fbvm` | `uint`   | This flag controls how back vertices are obtained.: "score" or "rayCast". The default is score. |
+| `deformer`              | `d`    | `string` | Name of the deformer used for back vertex copying. |
+
+---
+<br>
+
+## rpq9MirrorSkinWeights
+
+### Overview
+rpq9MirrorSkinWeights is undoable.  
+This command mirrors skin weights.  
+It can only be used with mesh geometry.  
+Because the mirror operation also uses the skin weights of the vertices on the target side, the skin weights of the vertices on the source side may also be updated.  
+
+### Flag
+
+| Long                    | Short  | Type     | Description                      |
+| ----------------------- | ------ | -------- | -------------------------------- |
+| `mirrorSource`          | `ms`   | `uint`   | This flag controls the mirror axis using emuns starting from 0.: "x", "y", "z", "-x", "-y" or "-z". The default is "x". |
+| `namingConvention`      | `nc`   | [`string`, `string`] | Regular expressions for the names used when classifying influences. Source-side and target-side strings. If not set, the joint label will be used. |
+| `threshold`             | `t`    | `float`  | Threshold used when interpolate mirror side weights. The derault value is 0.001. |
+| `skinCluster`           | `sc`   | `string` | Name of the skin cluster used for back vertex copying. By default, the last skin cluster is used. |
+
+---
+<br>
