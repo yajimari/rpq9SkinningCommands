@@ -1,5 +1,5 @@
 LicenseRef-rpq9RestrictedBinary
-Version 1.0
+Version 1.1
 
 Copyright (c) 2026 Ryoya Yajima
 
@@ -19,33 +19,32 @@ all copies or substantial portions of the Software.
 Any sublicense must be subject to the same restrictions and conditions as this
 license and may not grant broader rights than those granted under this license.
 
-3. Restriction on reverse engineering
-Except to the extent that such restriction is prohibited by applicable law,
-you may not reverse engineer, decompile, disassemble, decode, translate,
-or otherwise attempt to derive the source code, internal structure,
-algorithms, organization, or any non-public technical aspects of the Software.
+3. Reverse Engineering Restrictions
+Except to the extent expressly permitted by applicable law, you shall not:
 
-4. No assistance or authorization
+(a) decompile, disassemble, or otherwise attempt to derive the source code of the Software;
+
+(b) bypass, disable, or circumvent any technical protection measures implemented in the Software;
+
+(c) access or attempt to access any non-public internal functionality of the Software by means other than documented or intended interfaces.
+
+4. Permitted Activities
+The following activities are permitted:
+
+(a) integration of the Software with other software, tools, or workflows, including for the purpose of achieving interoperability, provided that such activities do not involve accessing or attempting to access the internal implementation of the Software.
+
+(b) observation, testing, and analysis of the Software’s behavior through its intended and documented interfaces shall not be considered a violation of Section 3.
+
+5. No assistance or authorization
 Except to the extent that such restriction is prohibited by applicable law,
 you may not assist, authorize, or encourage any third party to perform any
 act prohibited by Section 3.
 
-5. Restriction on disclosure of information obtained through analysis
-Except to the extent permitted or required by applicable law, you may not
-disclose, publish, communicate, transmit, distribute, or otherwise make
-available to any third party any non-public technical information obtained
-through reverse engineering, decompilation, disassembly, decoding, translation,
-or similar analysis of the Software.
-
-6. Interoperability carve-out
-Where applicable law permits decompilation or similar acts solely for the
-purpose of achieving interoperability, any information obtained through such
-acts may be used or disclosed only to the extent strictly necessary to achieve
-that interoperability and for no other purpose.
+6. Restriction on disclosure of information obtained through analysis
+You may not disclose non-public technical information obtained through prohibited acts under Section 3.
 
 7. No modifications or derivative works
-Except to the extent required by applicable law, you may not modify the Software
-or create derivative works based on the Software.
+Except to the extent expressly permitted by applicable law, you may not modify the Software or create derivative works based on the Software.
 
 8. No trademark rights
 This license does not grant any right, title, or interest in any trademarks,
