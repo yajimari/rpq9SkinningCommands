@@ -6,7 +6,20 @@ This repository uses a multi-license structure.
 ## ⬇️ Quick Installation
 
 1. Download the files in this repository from the Releases page.
-2. Extract the downloaded file and drag and drop **quick_install.py** into the Maya you want to install.
+2. Copy the appropriate version of `rpq9SkinningCommands.mll` or `rpq9SkinningCommands.so` from under the `plug-ins` folder to the directory set in `MAYA_PLUG_IN_PATH`.(You can check the destination directory by running the code below.)
+```python
+import os
+from pathlib import Path
+import maya.cmds as cmds
+
+version = cmds.about(majorVersion=True)
+if int(version) < 2025:
+    raise RuntimeError('Unsupported Maya version.')
+
+appDir = Path(os.environ.get("MAYA_APP_DIR"))
+currentVerPluginDir = appDir.joinpath(version, 'plug-ins')
+print(currentVerPluginDir.as_posix())
+```
 3. Load `rpq9SkinningCommands.mll` or `rpq9SkinningCommands.so` from the Plug-in Manager.
 
 ##  📖 Documentation

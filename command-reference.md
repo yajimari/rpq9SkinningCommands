@@ -22,7 +22,7 @@ When selecting components, you can use either vertices or faces. Depending on th
 | ----------------------- | ------ | -------- | -------------------------------- |
 | `maxParam`              | `mp`   | `float`  | Maximum distance for back vertex search. The default value is std::numeric_limits<float>::max(). |
 | `threshold`             | `t`    | `float`  | Threshold used when findBackVertexMethod is set to raycast. The derault value is 0.001. |
-| `findBackVertexMethod`  | `fbvm` | `int`    | This flag controls how back vertices are obtained.: "score" or "rayCast". The default is default. |
+| `findBackVertexMethod`  | `fbvm` | `int`    | This flag controls how back vertices are obtained.: "scoring" or "rayCast". The default is scoring. |
 | `skinCluster`           | `sc`   | `string` | Name of the skin cluster used for back vertex copying. By default, the last skin cluster is used. |
 
 ---
@@ -42,7 +42,7 @@ When selecting components, you can use either vertices or faces. Depending on th
 | ----------------------- | ------ | -------- | -------------------------------- |
 | `maxParam`              | `mp`   | `float`  | Maximum distance for back vertex search. The default value is std::numeric_limits<float>::max(). |
 | `threshold`             | `t`    | `float`  | Threshold used when findBackVertexMethod is set to raycast. The derault value is 0.001. |
-| `findBackVertexMethod`  | `fbvm` | `uint`   | This flag controls how back vertices are obtained.: "score" or "rayCast". The default is score. |
+| `findBackVertexMethod`  | `fbvm` | `uint`   | This flag controls how back vertices are obtained.: "scoring" or "rayCast". The default is scoring. |
 | `deformer`              | `d`    | `string` | Name of the deformer used for back vertex copying. |
 
 ---
