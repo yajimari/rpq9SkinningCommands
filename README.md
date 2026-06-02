@@ -3,7 +3,7 @@
 **rpq9SkinningCommands** is a custom commands for Autodesk Maya.  
 This repository uses a multi-license structure.
 
-## ⬇️ Quick Installation
+## ⬇️ Installation
 
 1. Download the files in this repository from the Releases page.
 2. Copy the appropriate version of `rpq9SkinningCommands.mll` or `rpq9SkinningCommands.so` from under the `plug-ins` folder to the directory set in `MAYA_PLUG_IN_PATH`.(You can check the destination directory by running the code below.)
@@ -18,7 +18,7 @@ if int(version) < 2025:
 
 appDir = Path(os.environ.get("MAYA_APP_DIR"))
 currentVerPluginDir = appDir.joinpath(version, 'plug-ins')
-print(currentVerPluginDir.as_posix())
+print('Installation directory: ', currentVerPluginDir.as_posix())
 ```
 3. Load `rpq9SkinningCommands.mll` or `rpq9SkinningCommands.so` from the Plug-in Manager.
 
