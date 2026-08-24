@@ -62,8 +62,32 @@ Because the mirror operation also uses the skin weights of the vertices on the t
 | ----------------------- | ------ | -------- | -------------------------------- |
 | `mirrorSource`          | `ms`   | `uint`   | This flag controls the mirror axis using emuns starting from 0.: "x", "y", "z", "-x", "-y" or "-z". The default is "x". |
 | `namingConvention`      | `nc`   | [`string`, `string`] | Regular expressions for the names used when classifying influences. Source-side and target-side strings. If not set, the joint label will be used. |
-| `threshold`             | `t`    | `float`  | Threshold used when interpolate mirror side weights. The derault value is 0.001. |
+| `threshold`             | `t`    | `float`  | Threshold used when interpolate mirror side weights. The derault value is 1e-10. |
 | `skinCluster`           | `sc`   | `string` | Name of the skin cluster used for back vertex copying. By default, the last skin cluster is used. |
+
+---
+<br>
+
+## rpq9SkinWeightDisplay
+
+### Overview
+rpq9SkinWeightDisplay is NOT undoable.  
+This command modify settings of "rpq9 VP2 Skinning Renderer Override".  
+
+### Flag
+
+| Long                    | Short  | Type     | Description                      | Properties |
+| ----------------------- | ------ | -------- | -------------------------------- | -----------|
+| `skinCluster`           | `sc`   | `string` | skinCluster name of display weights. | C Q   |
+| `influence`             | `inf`  | `string` | influence name of display weights. | C Q   |
+| `displayColorRamp`      | `dcr`  | `bool`   | Set whether to display the color ramp. | C Q   |
+| `displayWeightValues`   | `dwv`  | `bool`  | Set whether to display the weight values. | C Q   |
+| `remove`                | `rm`   |  | remove skinCluster from display weights target list. | C   |
+| `clear`                 | `cl`   |  | clear display weights target list. | C   |
+| `valueRampPoint`        | `vrp`  | [`int`, `float`, `float`, `float`] | Set the color ramp colors, as well as the ramp point indices (0 to 4) and RGB values. | C Q   |
+| `valueDecimalPlaces`    | `vdp`  | `uint` | Number of decimal places for displayed skin weight values. | C Q   |
+| `valueTextColor`        | `vtc`  | [`float`, `float`, `float`, `float`] | Skin weight values display color. | C Q   |
+| `valueFontSize`         | `vfs`  | `uint` | Skin weight values font size. | C Q   |
 
 ---
 <br>
